@@ -1,0 +1,36 @@
+<view class="banner">
+  <swiper 
+    indicator-dots="{{true}}"
+    autoplay="{{true}}"
+    interval="{{3000}}"
+    circular="{{true}}"
+  >
+    <swiper-item>
+      <image src="/images/bestplayers.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/lpl.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/jumpfly.png"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="post">
+  <view class="post__info">
+    <image class="post__info__author" src="/images/avatar/3.png"></image>
+    <text class="post__info__date">Nov 18 2020</text>
+  </view>
+  <text class="post__title">{{title}}</text>
+  <image class="post__image" src="/images/lpl.png"></image>
+  <text class="post__content">8月9号, LPL常规赛收官之战结束</text>
+  <view class="post__like">
+    <!-- <image class="post__like__image" src="/images/icon/chat.png"></image> -->
+    <l-icon class="post__like__image" size="28" color="#666" name="favor" />
+    <text class="post__like__font">92</text>
+    <!-- <image class="post__like__image" src="/images/icon/view.png"></image> -->
+    <l-icon class="post__like__image" size="32" color="#666" name="eye" />
+    <text class="post__like__font">102</text>
+  </view>
+</view>
+

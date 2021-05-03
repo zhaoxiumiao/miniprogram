@@ -1,8 +1,13 @@
 {
   "pages": [
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/posts/posts"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#b3d4db"
+    "navigationBarBackgroundColor": "#C22A1F"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    
   }
 }
