@@ -4,7 +4,7 @@
   <!-- <image class="container__avatar" src="/images/avatar/1.png"></image> -->
   <l-avatar class="container__l-avatar" placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}" size="180"/>
   <text class="container__motto">Hello,fool</text>
-  <view class="container__journey">
+  <view bind:tap="onTap" class="container__journey">
     <text class="container__journey__text">开启小程序之旅</text>
   </view>
 </view>

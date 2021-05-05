@@ -1,0 +1,21 @@
+<view class="container">
+  <image class="container__head-img" src="{{headImgSrc}}"></image>
+  <image wx:if="{{!isPlaying}}" bind:tap="onMusic" class="container__audio" src="/images/music/music-start.png"></image>
+  <image wx:else bind:tap="onMusic" class="container__audio" src="/images/music/music-stop.png"></image>
+  <view class="container__author-date">
+    <image class="container__author-date__avatar" src="{{avatar}}"></image>
+    <text class="container__author-date__author">{{author}}</text>
+    <text class="container__author-date__const-text">发表于</text>
+    <text class="container__author-date__date">{{date}}</text>
+  </view>
+  <text class="container__title">{{title}}</text>
+  <view class="container__tool">
+    <view class="container__tool__circle">
+      <image wx:if="{{collected}}" bind:tap="onCollect" class="container__tool__circle-collect container__tool__circle-img" src="/images/icon/collection.png"></image>
+      <image wx:else bind:tap="onCollect" class="container__tool__circle-collect container__tool__circle-img" src="/images/icon/collection-anti.png"></image>
+      <image bind:tap="onShare" class="container__tool__circle-share container__tool__circle-img" src="/images/icon/share.png"></image>
+    </view>
+    <view class="container__tool__horizon"></view>
+  </view>
+  <text class="container__detail">{{detail}}</text>
+</view>

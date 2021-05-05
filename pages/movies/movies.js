@@ -1,31 +1,28 @@
-// pages/welcome/welcome.js
-
+// pages/movies/movies.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  onTap(params){
-    // 跳转页面 navigateTo 会保留当前页面
-    wx.switchTab({ 
-      url:"/pages/posts/posts"
-    })
-    // wx.redirectTo({ //不会保留当前页面
-    //   url: "/pages/posts/posts"
-    // })
+    inTheaters:[],
+    // comingSoon:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //promisic
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/in_theaters?start=0&count=3', //API地址
+      success:(res)=>{
+        this.setData({
+          inTheaters:res
+        })
+      }
+    })
   },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -52,7 +49,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log('卸载了');
+
   },
 
   /**

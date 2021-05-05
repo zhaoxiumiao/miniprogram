@@ -1,0 +1,5 @@
+<!-- 自定义组件
+从服务器加载数据-->
+<movie-list movies="{{inTheaters}}" title="正在热映" f-class="movie-list"/>
+<movie-list title="即将上映" f-class="movie-list"/>
+<movie-list title="豆瓣Top250" f-class="movie-list"/>
