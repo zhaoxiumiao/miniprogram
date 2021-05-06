@@ -1,36 +1,41 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/posts/posts",
-          "pathName": "pages/posts/posts",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/post-detail/post-detail",
-          "pathName": "pages/post-detail/post-detail",
-          "query": "pid=0",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/movies/movies",
-          "pathName": "pages/movies/movies",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/posts/posts",
+                    "pathName": "pages/posts/posts",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/post-detail/post-detail",
+                    "pathName": "pages/post-detail/post-detail",
+                    "query": "pid=0",
+                    "scene": null
+                },
+                {
+                    "name": "pages/movies/movies",
+                    "pathName": "pages/movies/movies",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/more-movie/more-movie",
+                    "pathName": "pages/more-movie/more-movie",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

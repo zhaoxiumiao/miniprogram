@@ -36,6 +36,13 @@ Page({
       posts
     })
   },
+  //跳转详情页面
+  onJumpToDetail(event){
+    const id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: "/pages/post-detail/post-detail?pid="+id
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

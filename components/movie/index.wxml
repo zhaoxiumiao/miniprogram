@@ -1,14 +1,14 @@
 <!--components/movie/index.wxml-->
 <view class="container">
-  <image class="container__img" src="/images/lpl.png"></image>
-  <text class="container__title">盗梦空间盗梦空间盗梦空间盗梦空间</text>
+  <image class="container__img" src="{{movie.images.large}}"></image>
+  <text class="container__title">{{movie.title}}</text>
   <view class="container__rate">
     <l-rate 
-    score="3.0" 
+    score="{{movie.rating.stars*1/10}}" 
     size="22"
     disabled="{{true}}"
     active-color="yellow"
     />
-    <text class="container__score">3.0</text>
+    <text class="container__score">{{movie.rating.average}}</text>
   </view>
 </view>

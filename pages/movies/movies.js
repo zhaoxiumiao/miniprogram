@@ -1,4 +1,5 @@
 // pages/movies/movies.js
+const app = getApp()
 Page({
 
   /**
@@ -6,7 +7,8 @@ Page({
    */
   data: {
     inTheaters:[],
-    // comingSoon:[],
+    comingSoon:[],
+    top250:[]
   },
 
   /**
@@ -15,12 +17,49 @@ Page({
   onLoad: function (options) {
     //promisic
     wx.request({
-      url: 'http://t.talelin.com/v2/movie/in_theaters?start=0&count=3', //API地址
+      url: app.gBaseUrl+'in_theaters', //API地址
+      data:{
+        start:0,
+        count:3
+      },
       success:(res)=>{
         this.setData({
-          inTheaters:res
+          inTheaters:res.data.subjects
         })
+        console.log(this.data.inTheaters);
       }
+    })
+    wx.request({
+      url: app.gBaseUrl+'coming_soon', //API地址
+      data:{
+        start:0,
+        count:3
+      },
+      success:(res)=>{
+        this.setData({
+          comingSoon:res.data.subjects
+        })
+        console.log(this.data.inTheaters);
+      }
+    })
+    wx.request({
+      url: app.gBaseUrl+'top250', //API地址
+      data:{
+        start:0,
+        count:3
+      },
+      success:(res)=>{
+        this.setData({
+          top250:res.data.subjects
+        })
+        console.log(this.data.inTheaters);
+      }
+    })
+  },
+  onGotoMore(event){
+    const type = event.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/more-movie/more-movie?type='+type
     })
   },
 

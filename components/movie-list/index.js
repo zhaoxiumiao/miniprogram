@@ -8,6 +8,9 @@ Component({
     title:String,
     movies:Array
   },
+  onLoad(){
+    console.log(this.data.movies);
+  },
 
   /**
    * 组件的初始数据
