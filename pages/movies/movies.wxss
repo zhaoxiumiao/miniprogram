@@ -7,6 +7,22 @@
   height: 90rpx !important;
 }
 
+.search-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40rpx 30rpx;
+}
+
+.search-container::after{
+  content: '';
+  width: 200rpx;
+}
+
+.search-container__movie{
+  margin-bottom: 30rpx;
+}
+
 page{
   background-color: #f2f2f2;
 }
