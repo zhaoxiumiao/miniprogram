@@ -1,0 +1,72 @@
+<view class="container">
+    <image mode="aspectFill" class="container__head-img" src="{{movie.image}}"></image>
+    <view class="container__head-img-hover">
+        <text class="container__head-img-hover__main-title">{{movie.title}}</text>
+        <text class="container__head-img-hover__sub-title">{{movie.subtitle}}</text>
+        <view class="container__head-img-hover__like">
+            <text class="container__like__highlight-font">{{movie.wishCount}}</text>
+            <text class="container__like__plain-font">人喜欢</text>
+            <text class="container__like__highlight-font">{{movie.commentsCount}}</text>
+            <text class="container__like__plain-font">评论</text>
+        </view>
+        <image bind:tap="onViewPost" class="container__head-img-hover__movie-img" src="{{movie.image}}"></image>
+    </view>
+    <view class="container__summary">
+        <view class="container__summary__original-title">
+            <text>{{movie.title}}</text>
+        </view>
+        <view class="container__summary__flex-row">
+            <text class="container__summary__mark">评分</text>
+            <view class="container__summary__score-container">
+                <l-rate 
+                score="{{movie.rating}}" 
+                size="22"
+                disabled="{{true}}"
+                active-color="yellow"
+                />
+                <text class="container__summary__average">{{movie.average}}</text>
+            </view>
+        </view>
+        <view class="container__summary__flex-row">
+            <text class="container__summary__mark">导演</text>
+            <text>{{movie.director}}</text>
+        </view>
+        <view class="container__summary__flex-row">
+            <text class="container__summary__mark">影人</text>
+            <text>{{movie.casts}}</text>
+        </view>
+        <view class="container__summary__flex-row">
+            <text class="container__summary__mark">类型</text>
+            <text>{{movie.genres}}</text>
+        </view>
+    </view>
+    <view class="container__hr"></view>
+    <view class="container__synopsisi">
+        <text class="container__synopsisi__font">剧情简介</text>
+        <text class="container__synopsisi__content">{{movie.summary}}</text>
+    </view>
+    <view class="container__hr"></view>
+    <view class="container__casts">
+        <text class="container__casts__title">影人</text>
+        <scroll-view enable-flex="{{true}}" scroll-x="{{true}}" class="container__casts__content">
+            <block wx:for="{{movie.castsInfo}}" wx:key="index">
+                <view class="container__casts__info">
+                    <image src="{{item.img}}" class="container__casts__img"></image>
+                    <text class="container__casts__name">{{item.name}}</text>
+                </view>
+                <!-- <view class="container__casts__info">
+                    <image src="{{item.img}}" class="container__casts__img"></image>
+                    <text class="container__casts__name">{{item.name}}</text>
+                </view>
+                <view class="container__casts__info">
+                    <image src="{{item.img}}" class="container__casts__img"></image>
+                    <text class="container__casts__name">{{item.name}}</text>
+                </view>
+                <view class="container__casts__info">
+                    <image src="{{item.img}}" class="container__casts__img"></image>
+                    <text class="container__casts__name">{{item.name}}</text>
+                </view> -->
+            </block>
+        </scroll-view>
+    </view>
+</view>

@@ -15,7 +15,7 @@ Page({
      */
     onLoad: function (options) {
         const type = options.type
-        this._type = type
+        this.data._type = type
         wx.request({
             url: app.gBaseUrl+type, //API地址
             data:{
@@ -37,6 +37,21 @@ Page({
      */
     onReady: function () {
         // wx.showNavigationBarLoading() //轻提示
+        let title = '电影'
+        switch(this.data._type){
+            case 'in_theaters':
+                title="正在热映"
+                break
+            case 'coming_soon':
+                title="即将上映"
+                break
+            case 'top250':
+                title="豆瓣Top250"
+                break
+        }
+        wx.setNavigationBarTitle({
+            title: title
+        })
     },
 
     /**
@@ -65,7 +80,7 @@ Page({
      */
     onPullDownRefresh: function () {
         wx.request({
-            url: app.gBaseUrl+this._type, //API地址
+            url: app.gBaseUrl+this.data._type, //API地址
             data:{
                 start:0,
                 count:12
@@ -85,7 +100,7 @@ Page({
     onReachBottom: function () {
         wx.showNavigationBarLoading()
         wx.request({
-            url: app.gBaseUrl+this._type, //API地址
+            url: app.gBaseUrl+this.data._type, //API地址
             data:{
                 start:this.data.movies.length,
                 count:12

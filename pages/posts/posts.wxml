@@ -20,6 +20,11 @@
 
 <block wx:for="{{posts}}" wx:key="postId">
   <!-- 重命名 wx:for-item="item" -->
-  <post data="{{item}}"/>
+  <post 
+    bind:posttap="onJumpToDetail" 
+    bind:tapavrtar="enlarge"
+    data-id="{{item.postId}}" 
+    data="{{item}}"
+  />
 </block>
 

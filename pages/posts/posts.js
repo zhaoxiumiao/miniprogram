@@ -43,6 +43,14 @@ Page({
       url: "/pages/post-detail/post-detail?pid="+id
     })
   },
+  //头像
+  enlarge(e){
+    const avatar = e.detail
+    wx.showToast({
+      title: '头像',
+      image: avatar
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

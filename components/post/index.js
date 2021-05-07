@@ -23,20 +23,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    //跳转详情页面
-    onJumpToDetail(event){
-      const id = event.currentTarget.dataset.id
-      wx.navigateTo({
-        url: "/pages/post-detail/post-detail?pid="+id
-      })
+    //自定义事件
+    onTap(){
+      this.triggerEvent('posttap')
     },
-    //头像
-    enlarge(event){
+    //自定义事件
+    onAvrtar(event){
       const avatar = event.currentTarget.dataset.img
-      wx.showToast({
-        title: '头像',
-        image: avatar
-      })
-    },
+      this.triggerEvent('tapavrtar',avatar)
+    }
   }
 })

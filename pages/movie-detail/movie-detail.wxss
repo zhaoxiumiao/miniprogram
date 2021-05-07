@@ -1,0 +1,156 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__head-img{
+    width: 100%;
+    height: 320rpx;
+    filter: blur(20px);
+}
+
+.container__head-img-hover{
+    width: 100%;
+    height: 320rpx;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__head-img-hover__movie-img{
+    width: 175rpx;
+    height: 238rpx;
+    position: absolute;
+    top: 160rpx;
+    right: 30rpx;
+}
+
+.container__head-img-hover__main-title{
+    font-size: 38rpx;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 50rpx;
+    margin-left: 40rpx;
+}
+
+.container__head-img-hover__sub-title{
+    font-size: 28rpx;
+    color: white;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+}
+
+.container__head-img-hover__like{
+    display: flex;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+}
+
+.container__like__highlight-font{
+    color: #f21146;
+    font-size: 22rpx;
+    margin-right: 10rpx;
+}
+
+.container__like__plain-font{
+    color: #666;
+    font-size: 22rpx;
+    margin-right: 30rpx;
+}
+
+.container__summary{
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    color: #777;
+}
+
+.container__summary__original-title{
+    color: #1f3463;
+    font-size: 24rpx;
+    font-weight: bold;
+    margin-bottom: 40rpx;
+}
+
+.container__summary__flex-row{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10rpx;
+}
+
+.container__summary__score-container{
+    display: flex;
+    align-items: baseline;
+}
+
+.container__summary__mark{
+    margin-right: 30rpx;
+    white-space: nowrap;
+    color: #999;
+}
+
+.container__summary__average{
+    margin-left: 20rpx;
+}
+
+.container__hr{
+    margin-top: 45rpx;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+}
+
+.container__synopsisi{
+    margin-left: 40rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50rpx;
+}
+
+.container__synopsisi__font{
+    color: #999;
+}
+
+.container__synopsisi__content{
+    margin-top: 20rpx;
+    margin-right: 40rpx;
+    line-height: 40rpx;
+    letter-spacing: 1px;
+}
+
+.container__casts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50rpx;
+    margin-left: 40rpx;
+    margin-bottom: 50rpx;
+}  
+
+.container__casts__title{
+    color: #999;
+    margin-bottom: 40rpx;
+}
+
+.container__casts__content{
+    display: flex;
+    height: 300rpx;
+}
+
+.container__casts__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40rpx;
+    
+}
+
+
+.container__casts__img{
+    width: 170rpx;
+    height: 210rpx;
+    margin-bottom: 10rpx;
+}
+
+.container__casts__name{
+    
+}

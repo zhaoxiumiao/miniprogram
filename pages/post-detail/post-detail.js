@@ -45,7 +45,7 @@ Page({
     })
     const mgr = wx.getBackgroundAudioManager()
     this.data._mgr = mgr
-    mgr.onPause(this.stopMusic)
+    mgr.onPause(this.stopMusic) //监听音乐暂停
   },
   //停止播放
   stopMusic(){
